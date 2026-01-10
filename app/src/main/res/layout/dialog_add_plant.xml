@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog_add_plant"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_plant"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/etCommonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/common_name_e_g_cherry_tomato"
+            android:background="@drawable/bg_input_field"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/green_primary"
+            android:textColor="@color/green_primary"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etScientificName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="@color/green_primary"
+            android:textColor="@color/green_primary"
+            android:hint="@string/scientific_name_e_g_solanum"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etSunlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sunlight_e_g_full_sun"
+            android:background="@drawable/bg_input_field"
+            android:inputType="text"
+            android:textColorHint="#E70F8E68"
+            android:textColor="@color/green_primary"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etSeason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/season_e_g_summer"
+            android:background="@drawable/bg_input_field"
+            android:inputType="text"
+            android:textColorHint="@color/green_primary"
+            android:textColor="@color/green_primary"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etWaterFreq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/water_days"
+                android:inputType="number"
+                android:background="@drawable/bg_input_field"
+                android:textColorHint="@color/green_primary"
+                android:textColor="@color/green_primary"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/etGrowthDuration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/growth_days"
+                android:inputType="number"
+                android:background="@drawable/bg_input_field"
+                android:textColorHint="@color/green_primary"
+                android:textColor="@color/green_primary"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/image_url"
+            android:background="@drawable/bg_input_field"
+            android:inputType="textUri"
+            android:textColorHint="@color/green_primary"
+            android:textColor="@color/green_primary"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnSubmitPlant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_plant"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green_primary"/>
+
+    </LinearLayout>
+</ScrollView>

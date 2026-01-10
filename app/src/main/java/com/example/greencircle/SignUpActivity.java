@@ -32,6 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -98,7 +99,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 } else {
                                     // ERROR HANDLING
                                     try {
-                                        throw task.getException();
+                                        throw Objects.requireNonNull(task.getException());
                                     }
                                     //  Check if user already exists
                                     catch (FirebaseAuthUserCollisionException e) {
