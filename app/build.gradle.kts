@@ -15,6 +15,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "GEMINI_API_KEY", "\"${project.findProperty("GEMINI_API_KEY") ?: ""}\"")
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
@@ -57,4 +62,18 @@ dependencies {
     implementation(libs.google.firebase.auth)
     implementation(libs.play.services.auth)
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.generativeai)
+
+    // Lifecycle components (if not already there) for coroutines
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
+
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+
+    // Guava for async operations
+    implementation("com.google.guava:guava:33.5.0-android")
+
+    // Your other dependencies...
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("com.google.android.material:material:1.13.0")
 }

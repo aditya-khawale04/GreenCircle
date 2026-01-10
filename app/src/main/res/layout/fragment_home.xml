@@ -260,25 +260,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <FrameLayout
-        android:id="@+id/btnSparkle"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_margin="24dp"
-        android:background="@drawable/bg_input_field"
-        android:backgroundTint="#FBC02D"
-        android:elevation="6dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:src="@drawable/sparkles"
-            app:tint="@android:color/white" />
-    </FrameLayout>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAddTask"
         android:layout_width="wrap_content"
