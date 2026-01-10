@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GreenCircle</string>
+    <string name="tagline">Your pocket urban gardening mentor</string>
+    <string name="mentor">Mentor</string>
+    <string name="beginner">Beginner</string>
+    <string name="create_account">Create Account</string>
+    <string name="or_continue_with">OR CONTINUE WITH</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign In</string>
+    <string name="start_your_garden">Start Your Garden</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="username_hint">Aditya Khawale</string>
+    <string name="email_address">EMAIL ADDRESS</string>
+    <string name="user_email_hint">aditya@example.com</string>
+    <string name="password">PASSWORD</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="password_hint">••••••••</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="sign_in">Sign In</string>
+</resources>

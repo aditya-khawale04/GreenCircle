@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "895970505342",
+    "project_id": "greencircle-fdd7e",
+    "storage_bucket": "greencircle-fdd7e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895970505342:android:7051cbe7d95cfd97351e2f",
+        "android_client_info": {
+          "package_name": "com.example.greencircle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZMlhOTdiLfPlljuS6OtZUEKMbfuq7-jM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
