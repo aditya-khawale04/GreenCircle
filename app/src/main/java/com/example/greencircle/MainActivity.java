@@ -71,11 +71,9 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.plants) {
                 selectedFragment = new PlantsFragment();
             } else if (itemId == R.id.community) {
-                // selectedFragment = new CommunityFragment(); // Create this class if missing
-                selectedFragment = new HomeFragment(); // Placeholder
+                 selectedFragment = new CommunityFragment();
             } else if (itemId == R.id.journal) {
-                // selectedFragment = new JournalFragment(); // Create this class if missing
-                selectedFragment = new HomeFragment(); // Placeholder
+                 selectedFragment = new JournalFragment();
             }
 
             if (selectedFragment != null) {
