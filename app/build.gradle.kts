@@ -41,39 +41,37 @@ android {
 }
 
 dependencies {
+    // Firebase BoM - Import this FIRST to manage versions for all firebase libs
+    implementation(platform(libs.firebase.bom))
 
+    // Firebase Libraries (No versions needed if using BoM)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage) // This was causing the error
+
+    // UI and AndroidX
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.firebase.auth)
+
+    // Google & Credentials
     implementation(libs.credentials)
     implementation(libs.credentials.play.services.auth)
     implementation(libs.googleid)
-    implementation(libs.firebase.firestore)
+    implementation(libs.play.services.auth)
+
+    // Image Loading & AI
+    implementation(libs.glide)
+    implementation(libs.generativeai) // Removed the duplicate line
+
+    // Lifecycle & Utilities
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.guava)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    // Import the BoM for the Firebase platform
-    implementation(libs.firebase.bom)
-
-    // Add the dependency for the Firebase Authentication library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation(libs.google.firebase.auth)
-    implementation(libs.play.services.auth)
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation(libs.generativeai)
-
-    // Lifecycle components (if not already there) for coroutines
-    implementation(libs.lifecycle.viewmodel.ktx)
-    implementation(libs.lifecycle.runtime.ktx)
-
-    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
-
-    // Guava for async operations
-    implementation("com.google.guava:guava:33.5.0-android")
-
-    // Your other dependencies...
-    implementation("androidx.appcompat:appcompat:1.7.1")
-    implementation("com.google.android.material:material:1.13.0")
 }

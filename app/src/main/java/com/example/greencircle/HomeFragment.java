@@ -1,6 +1,7 @@
 package com.example.greencircle;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -69,7 +70,26 @@ public class HomeFragment extends Fragment {
         fetchGreeting();
 
         binding.btnAddTask.setOnClickListener(v -> showAddTaskDialog());
+        binding.btnLogout.setOnClickListener(v -> {
+            logoutUser();
+        });
+        binding.btnUserProfile.setOnClickListener(v -> {
+            getParentFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, new ProfileFragment())
+                    .addToBackStack(null)
+                    .commit();
+        });
     }
+
+    private void logoutUser() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(getContext(), LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+        startActivity(intent);
+    }
+
     private void fetchTasksForToday() {
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
@@ -226,7 +246,7 @@ public class HomeFragment extends Fragment {
         FirebaseUser user = mAuth.getCurrentUser();
         if(user != null) {
             String name = user.getDisplayName() != null ? user.getDisplayName() : "Gardener";
-            binding.tvGreeting.setText("Hello, " + name + "!");
+            binding.tvGreeting.setText(String.format("Hello, %s!", name));
         }
     }
 }

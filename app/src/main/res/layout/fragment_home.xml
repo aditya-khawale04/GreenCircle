@@ -60,10 +60,11 @@
                     android:backgroundTint="#E6F4EA">
 
                     <ImageView
+                        android:id="@+id/btnUserProfile"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/outline_photo_camera_24"
+                        android:src="@drawable/outline_person_24"
                         app:tint="#0F8E5F" />
                 </FrameLayout>
 
